@@ -37,6 +37,7 @@ board=function(){
    positionPlayers= function positionPlayers(data){
       data.players.forEach(function(p){ 
       paint_snake(p.posArray);
+      player().init(p);
         
       });
     }
