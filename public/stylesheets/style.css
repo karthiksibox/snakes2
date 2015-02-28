@@ -6,3 +6,29 @@ body {
 a {
   color: #00B7FF;
 }
+
+#control{
+}
+
+
+.left:before{
+  content: "\2190";
+  font-size: -webkit-xxx-large
+}
+
+.right:before{
+  content: "\2192";
+  font-size: -webkit-xxx-large
+}
+
+
+.up:before{
+  content: "\2191";
+  font-size: -webkit-xxx-large
+}
+
+.down:before{
+  content: "\2193";
+  font-size: -webkit-xxx-large
+}
+

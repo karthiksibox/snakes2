@@ -134,7 +134,9 @@ function player(){
     }
 
     var all_info={id: id,posArray: posArray};
+    if(typeof(socket)!=undefined){
     socket.emit('update_snake',all_info);
+    }
     check_collision(nextPosition);
     paint_apple(apple);
 
