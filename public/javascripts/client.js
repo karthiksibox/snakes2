@@ -37,6 +37,7 @@ $( document ).ready(function(){
   $('body').append('<canvas id="floor">');
   document.getElementById('floor').width=window.innerWidth-100;
   document.getElementById('floor').height=400;
+  socket=io(window.location.hostname+":8000");
 
   board().initialize();
   bindEvents();
@@ -134,11 +135,9 @@ function player(){
     }
 
     var all_info={id: id,posArray: posArray};
-    if(typeof(socket)!=undefined){
     socket.emit('update_snake',all_info);
-    }
-    check_collision(nextPosition);
-    paint_apple(apple);
+    //check_collision(nextPosition);
+    //paint_apple(apple);
 
   }
 

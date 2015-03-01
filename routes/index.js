@@ -18,4 +18,13 @@ router.post('/add_player',function(req,res){
   res.send(board);
 });
 
-module.exports = router;
+function all_socket_init(){
+  ws.on('update_snake',function(d){
+  })
+  
+}
+
+module.exports = {router: router,
+init_listeners: all_socket_init}
+
+
